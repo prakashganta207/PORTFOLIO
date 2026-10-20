@@ -3,12 +3,21 @@ const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 
 if (navToggle && navLinks) {
+  const setOpen = (open) => {
+    navLinks.classList.toggle('open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+  };
+
   navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
+    setOpen(!navLinks.classList.contains('open'));
   });
 
   navLinks.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => navLinks.classList.remove('open'));
+    link.addEventListener('click', () => setOpen(false));
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setOpen(false);
   });
 }
 
@@ -16,14 +25,31 @@ if (navToggle && navLinks) {
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Reveal-on-scroll for cards (progressive enhancement — content is
-// visible by default; JS only adds the fade/slide-in class).
+// Placeholder links (e.g. resume before a PDF is added) shouldn't jump to top.
+document.querySelectorAll('a[data-placeholder]').forEach((link) => {
+  link.addEventListener('click', (e) => {
+    if (link.getAttribute('href') === '#') e.preventDefault();
+  });
+});
+
+// Reveal-on-scroll (progressive enhancement — content is visible by
+// default; JS only adds the fade/slide-in class).
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const revealTargets = document.querySelectorAll(
-  '.skill-card, .project-card, .contact-card, .timeline-item'
+  '.section-tag, .section-title, .about-grid > *, .skill-card, .project-card, ' +
+  '.timeline-item, .callout-lg, .contact-card'
 );
 
-if ('IntersectionObserver' in window && revealTargets.length) {
-  revealTargets.forEach((el) => el.classList.add('reveal'));
+if (!reduceMotion && 'IntersectionObserver' in window && revealTargets.length) {
+  // Stagger siblings inside grids so cards cascade in rather than pop together.
+  revealTargets.forEach((el) => {
+    const siblings = Array.from(el.parentElement.children).filter((c) =>
+      c.matches('.skill-card, .project-card, .contact-card, .timeline-item, .about-grid > *')
+    );
+    const i = siblings.indexOf(el);
+    if (i > 0) el.style.setProperty('--reveal-delay', `${Math.min(i, 5) * 70}ms`);
+    el.classList.add('reveal');
+  });
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -38,9 +64,4 @@ if ('IntersectionObserver' in window && revealTargets.length) {
   );
 
   revealTargets.forEach((el) => observer.observe(el));
-
-  // Safety net: if anything is somehow still hidden after 2s, reveal it.
-  setTimeout(() => {
-    revealTargets.forEach((el) => el.classList.add('in-view'));
-  }, 2000);
 }

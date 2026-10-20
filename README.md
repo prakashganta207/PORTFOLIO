@@ -18,9 +18,9 @@ Just open `index.html` in a browser, or serve the folder:
 3. In the repo: Settings → Pages → Source → deploy from the `main` branch, root folder.
 4. Your site will be live at `https://your-username.github.io/` (or `/repo-name/`).
 
-## Things to personalize before publishing
-- Replace `YOUR-USERNAME` in the GitHub/LinkedIn links (hero section + contact section) with your real profile URLs.
-- Add real project links (the "Code ↗" / "Details ↗" links currently point to `#`).
-- Fill in the "Add your education / earlier roles" timeline placeholder with your actual school/college + dates, and any earlier jobs or internships.
-- Optional: swap the terminal `whoami.sh` copy, tagline, or skills list to match how you'd describe yourself.
-- Optional: add a headshot/avatar — currently the design is intentionally photo-free (terminal graphic instead).
+## Things to fill in before publishing
+Search the HTML for `TODO` to find each spot.
+- **Resume/CV** — set the `href` on the "Download Resume" button (hero) to your PDF (e.g. drop `resume.pdf` in the repo and use `href="resume.pdf"`), then delete its `data-placeholder` attribute.
+- **LinkedIn** — the contact section has a "Coming soon" card; swap it for the commented-out link once you have a URL (and optionally add it to the hero socials).
+- **Project repos** — each project shows "Repo — coming soon"; replace with a `Code ↗` link once the repo is public.
+- **Optional: CGPA** — there's a commented-out `CGPA 8.03` row in the About facts list. Uncomment it only if you're comfortable making it public.

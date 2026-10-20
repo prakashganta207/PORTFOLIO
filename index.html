@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Prakash Reddy — DevOps & Full-Stack Developer</title>
-<meta name="description" content="Portfolio of Ganta Venkata Sai Prakash Reddy — DevOps & Full-Stack Developer building AI-instrumented systems." />
+<title>Prakash Reddy — DevOps, Full-Stack &amp; Applied AI Developer</title>
+<meta name="description" content="Portfolio of Ganta Venkata Sai Prakash Reddy — B.Tech CSE student and DevOps / full-stack developer focused on applied AI and agent systems. Open to internship opportunities." />
+<meta name="theme-color" content="#0b0d10" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -12,12 +13,12 @@
 </head>
 <body>
 
-<div class="noise"></div>
+<div class="noise" aria-hidden="true"></div>
 
 <header class="nav-wrap">
-  <nav class="nav">
+  <nav class="nav" aria-label="Main">
     <a href="#home" class="logo">PR<span class="dot">.</span></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
@@ -36,26 +37,41 @@
   <section id="home" class="hero">
     <div class="container hero-grid">
       <div class="hero-text">
-        <p class="eyebrow"><span class="pulse"></span> Available for opportunities</p>
+        <p class="eyebrow"><span class="pulse"></span> Open to internships · by Nov 2026</p>
         <h1>
           Hi, I'm <span class="highlight">Prakash Reddy</span><br />
           I build systems that don't break silently.
         </h1>
         <p class="lead">
-          DevOps &amp; full-stack developer based in Tamil&nbsp;Nadu, India — currently
-          designing an AgentOps-instrumented RAG system and shipping UI for a
-          hackathon MCP tool. I like software that's observable, not just functional.
+          B.Tech CSE student and DevOps &amp; full-stack developer, now going deep
+          on applied AI and agent systems — from observable RAG pipelines to
+          multi-agent products. Based in Chengalpattu, Tamil&nbsp;Nadu, India.
         </p>
+
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+          <!-- TODO: Add your resume PDF link here (e.g. href="resume.pdf"), then remove the data-placeholder attribute. -->
+          <a href="#" class="btn btn-ghost btn-resume" data-placeholder="Add your resume PDF link here" title="Add your resume PDF link here">
+            Download Resume <span aria-hidden="true">↓</span>
+          </a>
+          <a href="#contact" class="btn btn-text">Get in Touch →</a>
         </div>
+
+        <div class="callout">
+          <p class="callout-label">// currently</p>
+          <p class="callout-text">
+            <strong>Looking for an internship by November&nbsp;2026</strong>
+            in DevOps, full-stack, or applied AI — and preparing for 2027 campus placements.
+          </p>
+        </div>
+
         <div class="hero-socials">
-          <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
-          <a href="https://linkedin.com/in/YOUR-USERNAME" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-          <a href="mailto:prakashganta207@gmail.com" aria-label="Email">Email</a>
+          <a href="https://github.com/prakashganta207" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:prakashganta207@gmail.com">Email</a>
+          <!-- TODO: Add LinkedIn URL when available -->
         </div>
       </div>
+
       <div class="hero-visual" aria-hidden="true">
         <div class="terminal">
           <div class="terminal-bar">
@@ -67,16 +83,18 @@
 prakash-reddy
 
 <span class="c-prompt">$</span> cat role.txt
-DevOps + Full-Stack Developer
+DevOps + Full-Stack → Applied AI
+B.Tech CSE · 3rd year · class of 2028
 
 <span class="c-prompt">$</span> cat focus.txt
-- Observable, glass-box AI systems
-- RAG pipelines & agent instrumentation
-- Clean, reliable frontend/backend
+- Observable, glass-box AI agents
+- RAG pipelines &amp; telemetry
+- Multi-agent product builds
 
 <span class="c-prompt">$</span> status
-<span class="c-ok">building →</span> local admission RAG agent
-<span class="c-ok">shipping →</span> Gavel (Frontend Intelligence MCP)
+<span class="c-ok">shipped  →</span> local admission RAG agent
+<span class="c-warn">rebuild  →</span> code guard (security ML)
+<span class="c-ok">building →</span> story-to-manga (multi-agent)
 
 <span class="c-prompt">$</span> <span class="cursor">▌</span></code></pre>
           </div>
@@ -91,25 +109,34 @@ DevOps + Full-Stack Developer
       <p class="section-tag">01 · About</p>
       <h2 class="section-title">A little about me</h2>
       <div class="about-grid">
-        <p class="about-text">
-          I'm Ganta Venkata Sai Prakash Reddy, a developer working across
-          DevOps and full-stack engineering. Lately I've been going deep on
-          AI systems — not just building them, but making sure they're
-          <em>explainable</em> when things go wrong. My current project
-          compares a monitored ("glass box") AI agent against an unmonitored
-          one under simulated failures, measuring how much faster you can
-          detect and recover from problems when you actually instrument
-          your system.
-        </p>
-        <p class="about-text">
-          I'm based in Chengalpattu, Tamil Nadu, India, and I care about
-          software that's reliable, privacy-respecting, and built to be
-          understood — not just used.
-        </p>
+        <div>
+          <p class="about-text">
+            I'm Ganta Venkata Sai Prakash Reddy, a developer working across
+            DevOps and full-stack engineering, now focused on applied AI and
+            agent systems. I care about AI that's <em>explainable</em> when
+            things go wrong — not just impressive when they go right.
+          </p>
+          <p class="about-text">
+            Right now I'm balancing three builds: a production-ready, fully
+            local RAG agent with end-to-end observability; a security-ML
+            research project on vulnerabilities in LLM-generated code; and a
+            personal AI product that turns written stories into manga.
+          </p>
+          <p class="about-text">
+            I'm in my third year of B.Tech Computer Science Engineering and
+            I'm open to internship opportunities — ideally starting by
+            November 2026.
+          </p>
+        </div>
         <ul class="about-facts">
           <li><span>Location</span>Chengalpattu, Tamil Nadu, India</li>
-          <li><span>Focus</span>DevOps &amp; Full-Stack Development</li>
-          <li><span>Currently learning</span>Applied AI / Agent Systems</li>
+          <li><span>Education</span>B.Tech CSE · 3rd year · 2028</li>
+          <li><span>Focus</span>Applied AI &amp; Agent Systems</li>
+          <li><span>Background</span>DevOps &amp; Full-Stack</li>
+          <!-- Optional — uncomment if you're comfortable making this public:
+          <li><span>CGPA</span>8.03</li>
+          -->
+          <li><span>Status</span><span class="fact-accent">Open to internships</span></li>
           <li><span>Email</span><a href="mailto:prakashganta207@gmail.com">prakashganta207@gmail.com</a></li>
         </ul>
       </div>
@@ -131,7 +158,7 @@ DevOps + Full-Stack Developer
         </div>
 
         <div class="skill-card">
-          <h3>Backend &amp; Full-Stack</h3>
+          <h3>Backend</h3>
           <div class="tags">
             <span>Node.js</span><span>Python</span><span>REST APIs</span><span>MySQL</span>
           </div>
@@ -144,29 +171,28 @@ DevOps + Full-Stack Developer
           </div>
         </div>
 
-        <div class="skill-card">
+        <div class="skill-card skill-card-feature">
           <h3>AI / Agent Systems</h3>
           <div class="tags">
-            <span>RAG Pipelines</span><span>Ollama / vLLM</span><span>FAISS / Chroma</span><span>OpenTelemetry</span>
+            <span>RAG Pipelines</span><span>Ollama / vLLM</span><span>FAISS / Chroma</span><span>OpenTelemetry</span><span>Multi-agent orchestration</span>
           </div>
         </div>
 
         <div class="skill-card">
-          <h3>Data &amp; Observability</h3>
+          <h3>ML / Data</h3>
           <div class="tags">
-            <span>Streamlit</span><span>Grafana</span><span>MySQL</span><span>Ragas</span>
+            <span>scikit-learn</span><span>pandas</span><span>Streamlit</span><span>Grafana</span><span>Dataset analysis</span>
           </div>
         </div>
 
         <div class="skill-card">
           <h3>Tools</h3>
           <div class="tags">
-            <span>Git/GitHub</span><span>VS Code</span><span>Postman</span><span>Figma (basics)</span>
+            <span>Git/GitHub</span><span>VS Code</span><span>Postman</span>
           </div>
         </div>
 
       </div>
-      <p class="skills-note">* Skills list is a starting point — tell me what to add, remove, or reorder.</p>
     </div>
   </section>
 
@@ -176,64 +202,94 @@ DevOps + Full-Stack Developer
       <p class="section-tag">03 · Projects</p>
       <h2 class="section-title">Selected work</h2>
 
-      <div class="projects-grid">
+      <div class="projects-list">
 
-        <article class="project-card">
+        <!-- TODO: Replace each "Repo — coming soon" with a real link once the repo is public:
+             <a href="https://github.com/prakashganta207/REPO" target="_blank" rel="noopener">Code ↗</a> -->
+
+        <article class="project-card project-card-flagship">
           <div class="project-head">
-            <span class="project-index">01</span>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener">Code ↗</a>
-              <a href="#" target="_blank" rel="noopener">Details ↗</a>
-            </div>
+            <span class="project-index">01 · Flagship</span>
+            <span class="status status-shipped">Production-ready</span>
           </div>
           <h3>Local Admission Information Agent</h3>
-          <p class="project-sub">Glass-box vs. black-box AI agent research</p>
+          <p class="project-sub">Glass-box vs. black-box AI agent research · 3-person team</p>
           <p class="project-desc">
-            A privacy-safe RAG system that runs entirely locally (Qwen via
-            Ollama/vLLM, FAISS/Chroma for retrieval) and is fully
-            instrumented with OpenTelemetry + OpenInference. The core
-            research question: how much faster do you detect and recover
-            from failures — hallucination, context degradation, hard
-            crashes — when an agent is observable versus when it's a black
-            box? Includes a custom telemetry pipeline into MySQL and a
-            Streamlit/Grafana explainability dashboard.
+            A privacy-safe, fully local RAG system built as a research comparison
+            between a monitored ("glass box") AI agent and an unmonitored ("black
+            box") one. Everything runs locally for data privacy: Qwen via
+            Ollama/vLLM as the LLM, FAISS/Chroma for retrieval, OpenTelemetry +
+            OpenInference for full instrumentation, a custom telemetry pipeline
+            into MySQL, and a Streamlit/Grafana explainability dashboard.
           </p>
-          <div class="tags">
-            <span>Python</span><span>RAG</span><span>OpenTelemetry</span><span>MySQL</span><span>Streamlit</span>
+          <p class="project-desc">
+            The core question: how much faster can you detect and recover from
+            agent failures — hallucination, context degradation, hard crashes —
+            when the agent is fully observable?
+          </p>
+          <ul class="metrics">
+            <li><span>MTTR</span>Mean time to recovery</li>
+            <li><span>Detection</span>Reactive vs. proactive</li>
+            <li><span>~10–15%</span>Telemetry latency overhead</li>
+            <li><span>Coverage</span>Failure classes caught</li>
+          </ul>
+          <div class="project-foot">
+            <div class="tags">
+              <span>Python</span><span>RAG</span><span>OpenTelemetry</span><span>MySQL</span><span>Streamlit</span><span>Grafana</span>
+            </div>
+            <p class="project-meta">Team member · Educational institution project · <span class="repo-pending">Repo — coming soon</span></p>
           </div>
         </article>
 
         <article class="project-card">
           <div class="project-head">
             <span class="project-index">02</span>
-            <div class="project-links">
-              <a href="#" target="_blank" rel="noopener">Code ↗</a>
-              <a href="#" target="_blank" rel="noopener">Details ↗</a>
-            </div>
+            <span class="status status-rebuild">Rebuilding</span>
           </div>
-          <h3>Gavel — Frontend Intelligence MCP</h3>
-          <p class="project-sub">Hackathon project · UI, Widgets &amp; Live Demo Surface</p>
+          <h3>Code Guard</h3>
+          <p class="project-sub">ML-based detection &amp; self-correction of security vulnerabilities in LLM-generated code</p>
           <p class="project-desc">
-            A 4-person hackathon build focused on a Frontend Intelligence
-            MCP tool. My role covered the UI layer, interactive widgets,
-            and the live demo surface used to showcase the system's
-            capabilities in real time.
+            Analyzed a 35,000-record dataset of labelled vulnerable/fixed code
+            pairs across six vulnerability classes — XSS, SQL injection, command
+            injection, path traversal, buffer overflow, and insecure
+            deserialization — producing a full exploratory analysis
+            (distributions, correlations, code-length statistics) presented as a
+            pitch poster.
           </p>
-          <div class="tags">
-            <span>JavaScript</span><span>MCP</span><span>UI/UX</span><span>Live Demo Tooling</span>
+          <p class="project-desc">
+            Reopened in October 2026 and now being rebuilt from scratch with a
+            stronger architecture. Not finished yet — updates to follow.
+          </p>
+          <div class="project-foot">
+            <div class="tags">
+              <span>Python</span><span>Machine Learning</span><span>Security</span><span>Data Analysis</span>
+            </div>
+            <p class="project-meta">Solo project · <span class="repo-pending">Repo — coming soon</span></p>
           </div>
         </article>
 
-        <article class="project-card project-card-placeholder">
+        <article class="project-card">
           <div class="project-head">
             <span class="project-index">03</span>
+            <span class="status status-building">In development</span>
           </div>
-          <h3>Your next project</h3>
-          <p class="project-sub">Space reserved</p>
+          <h3>Story-to-Manga</h3>
+          <p class="project-sub">AI app that turns a written story into a manga</p>
           <p class="project-desc">
-            Send me details on another project — personal, academic, or
-            professional — and I'll slot it in here with the same layout.
+            A working base version exists, but it used placeholder art and fell
+            short of the bar I want. The upgrade targets pro-quality,
+            consistent-character art generation, an interactive editor (redraw
+            panels, edit speech bubbles), and a multi-agent team — writer,
+            artist, and editor agents — working together. Built to be a real
+            product, not just a demo.
           </p>
+          <p class="project-next"><span>next →</span> writer/director agents + a "character bible" for consistency</p>
+          <div class="project-foot">
+            <div class="tags">
+              <span>AI/ML</span><span>Multi-Agent Systems</span><span>Image Generation</span><span>Product Design</span>
+            </div>
+            <p class="project-meta">Solo project · <span class="repo-pending">Repo — coming soon</span></p>
+          </div>
         </article>
 
       </div>
@@ -250,25 +306,33 @@ DevOps + Full-Stack Developer
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <p class="timeline-date">2025 — Present</p>
-            <h3>Team Member — Local Admission Information Agent</h3>
-            <p>Educational institution project team (3 members). Working through foundational AI/ML concepts and building an AgentOps-instrumented RAG system from the ground up.</p>
+            <p class="timeline-date">Expected graduation 2028</p>
+            <h3>B.Tech — Computer Science Engineering</h3>
+            <p>Currently in 3rd year. Preparing for 2027 campus placements.</p>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <p class="timeline-date">2025 — Present</p>
-            <h3>UI &amp; Demo Lead — Gavel Hackathon Team</h3>
-            <p>4-person hackathon team building "Frontend Intelligence MCP." Owned UI, widgets, and the live demo surface.</p>
+            <p class="timeline-date">2025 — 2026 · Production-ready</p>
+            <h3>Team Member — Local Admission Information Agent</h3>
+            <p>3-person educational institution project. Built and shipped a fully local, AgentOps-instrumented RAG system comparing glass-box and black-box agents on failure detection and recovery.</p>
           </div>
         </div>
-        <div class="timeline-item timeline-placeholder">
+        <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <p class="timeline-date">Add your education / earlier roles</p>
-            <h3>Institution name, degree, dates</h3>
-            <p>Tell me your school/college, degree, and years, and any earlier internships or jobs — I'll add them here.</p>
+            <p class="timeline-date">Oct 2026 — Present · Rebuilding</p>
+            <h3>Code Guard — Security ML Research</h3>
+            <p>Solo project on ML-based detection of vulnerabilities in LLM-generated code. Reopened and being rebuilt from scratch with a stronger architecture.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <p class="timeline-date">Ongoing · In development</p>
+            <h3>Story-to-Manga — Personal AI Product</h3>
+            <p>Upgrading a working base version to a multi-agent architecture with consistent-character art and an interactive editor.</p>
           </div>
         </div>
       </div>
@@ -280,24 +344,31 @@ DevOps + Full-Stack Developer
     <div class="container">
       <p class="section-tag">05 · Contact</p>
       <h2 class="section-title">Let's build something</h2>
-      <p class="contact-lead">
-        Open to opportunities, collaborations, and interesting problems.
-        The fastest way to reach me is email.
-      </p>
+
+      <div class="callout callout-lg">
+        <p class="callout-label"><span class="pulse"></span> open to internship opportunities</p>
+        <p class="callout-text">
+          I'm looking for an internship <strong>by November 2026</strong> in
+          DevOps, full-stack, or applied AI. If you have a role — or just an
+          interesting problem — reach out. Email is the fastest way to reach me.
+        </p>
+      </div>
 
       <div class="contact-grid">
         <a class="contact-card" href="mailto:prakashganta207@gmail.com">
           <span class="contact-label">Email</span>
           <span class="contact-value">prakashganta207@gmail.com</span>
         </a>
-        <a class="contact-card" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">
+        <a class="contact-card" href="https://github.com/prakashganta207" target="_blank" rel="noopener">
           <span class="contact-label">GitHub</span>
-          <span class="contact-value">github.com/YOUR-USERNAME</span>
+          <span class="contact-value">github.com/prakashganta207</span>
         </a>
-        <a class="contact-card" href="https://linkedin.com/in/YOUR-USERNAME" target="_blank" rel="noopener">
+        <!-- TODO: Replace with a real link when available:
+             <a class="contact-card" href="https://linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener"> ... -->
+        <div class="contact-card contact-card-placeholder">
           <span class="contact-label">LinkedIn</span>
-          <span class="contact-value">linkedin.com/in/YOUR-USERNAME</span>
-        </a>
+          <span class="contact-value">Coming soon</span>
+        </div>
       </div>
     </div>
   </section>
